@@ -1,0 +1,22 @@
+ul {
+  background-color : red;
+}
+li {
+  color : white;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 5px;
+  text-transform: uppercase;
+}
+a {
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: rgba(255,255,255,1);
+}
+li:first-child a {
+  letter-spacing: 0.2pt;
+}
