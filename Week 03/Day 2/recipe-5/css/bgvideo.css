@@ -1,0 +1,29 @@
+header {
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+header video {
+  height: auto;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+
+  top: 0;
+  bottom: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  header video {
+      width:100%;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  header video { 
+      width:auto;
+      height: 100%;
+  }
+}
