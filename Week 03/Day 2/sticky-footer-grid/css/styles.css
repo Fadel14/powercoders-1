@@ -1,0 +1,93 @@
+/* general styles */
+html {
+  background: #fafafa;
+	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size : 1.9rem;
+}
+
+/* defining flex:1 on the flexible element of the grid children (main) pushes the footer to the bottom of the page */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+nav {
+  background: black;
+}
+
+footer {
+  background: black;
+  color: #ffffff;
+  padding: 3rem;
+  text-align: right;
+}
+
+address {
+  float: left;
+}
+
+/* reset ul styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+li {
+  margin: 1rem 2rem;
+}
+
+li.active a {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  color: red;
+  opacity: 1;
+}
+
+a {
+  color: #ffffff;
+  display: block;
+  opacity: 0.8;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+main a {
+  color: red;
+}
+
+#more:target + a {
+  display: none;
+}
+
+#more {
+  display: none;
+}
+
+#more + a,
+#more:target {
+  display: block;
+}
