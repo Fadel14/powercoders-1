@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'powercoders-icons';
+  src:
+    url('../fonts/powercoders-icons.ttf?9afvjv') format('truetype'),
+    url('../fonts/powercoders-icons.woff?9afvjv') format('woff'),
+    url('../fonts/powercoders-icons.svg?9afvjv#powercoders-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'powercoders-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav [class^="icon-"], nav [class*=" icon-"] {
+  padding-left: 3rem;
+  position: relative;
+}
+
+nav [class^="icon-"]:before, nav [class*=" icon-"]:before {
+  left: 0;
+  position: absolute;
+}
+
+.icon-news:before {
+  content: "\1f4f0";
+}
+.icon-home:before {
+  content: "\1f3e0";
+}
+.icon-shop:before {
+  content: "\1f6d2";
+}
+.icon-contact:before {
+  content: "\1f4de";
+  display: block;
+}
+.icon-support:before {
+  content: "\2370";
+}
+
+/* general styles */
+html {
+  background: #fafafa;
+	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size : 1.9rem;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  background: black;
+}
+
+/* defining flex:1 on the flexible element of the flexbox children pushes the footer to the bottom of the page */
+main {
+  flex: 1;
+}
+
+footer {
+  background: black;
+  color: #ffffff;
+  padding: 3rem;
+  text-align: right;
+}
+
+address {
+  float: left;
+}
+
+/* reset ul styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+li {
+  flex: 0;
+  margin: 1rem 2rem;
+}
+
+li.active a {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  color: red;
+  opacity: 1;
+}
+
+a {
+  color: #ffffff;
+  display: block;
+  opacity: 0.8;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+main a {
+  color: red;
+}
+
+#more:target + a {
+  display: none;
+}
+
+#more:target + a + a {
+  display: block;
+}
+
+#more,
+#more + a + a {
+  display: none;
+}
+
+#more:target {
+  display: block;
+}
