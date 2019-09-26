@@ -17,8 +17,8 @@ html {
 
 /* defining flex:1 on the flexible element of the grid children (main) pushes the footer to the bottom of the page */
 body {
-  min-height: 100vh;
   display: grid;
+  min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }

@@ -86,7 +86,12 @@ main a {
   display: none;
 }
 
-#more {
+#more:target + a + a {
+  display: block;
+}
+
+#more,
+#more + a + a {
   display: none;
 }
 
