@@ -1,0 +1,143 @@
+p::first-line {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p::first-letter {
+  font-size: 5em;
+}
+
+p::after {
+  /* mandatory attribute */
+  content: "";
+  /* mandatory attribute */
+  background: black;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+}
+
+a {  
+  color: green;
+  display: block;
+  margin-bottom: 1em;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline overline;
+}
+ 
+a:hover::after {
+  content: " >";
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+a:first-child {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+a:first-child:hover {
+  opacity: 0.5;
+  transition: opacity 2s ease-in-out 500ms;
+}
+
+:required {
+  border: 3px solid black;
+}
+
+input {
+  background: white;
+}
+
+select {
+  border-width: 2px;
+}
+
+:empty {
+  background: lightpink;
+}
+
+:valid {
+  background: white;
+  border-color: green;
+}
+
+:invalid {
+  background: red;
+  border-color: red;
+}
+
+form:invalid {
+  background: white;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label::before,
+.checkbox::before {
+  border: 2px solid black;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.5em;
+  width: 1em;
+}
+
+input[type="checkbox"]:checked + label::before,
+:checked + .checkbox::before {
+  background: green;
+}
+
+.square {
+  background-color: darkgreen;
+  height: 5em;
+  margin: 5em;
+  width: 5em;
+
+  animation: spin 2s linear infinite;
+
+  /*transform: rotate(45deg) translateX(2em) skewX(25deg) scale(0.5);
+  transform-origin: top left;
+  transition: transform 2s ease-in-out;*/
+}
+
+.square:hover {
+  /*transform: rotate(0) translateX(0) skewX(0) scale(2);*/
+}
+
+/* new animation definition - always at the end of the css stylesheet */ 
+@keyframes spin {
+  10% {
+    transform: rotateZ(0);
+  }
+
+  40% {
+    transform: rotateZ(360deg);
+  }
+
+  60% {
+    transform: rotateZ(360deg);
+  }
+
+  90% {
+    transform: rotateZ(0);
+  }
+
+}
