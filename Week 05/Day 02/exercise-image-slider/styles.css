@@ -1,0 +1,36 @@
+main {
+  display: inline-block;
+  position : relative;
+}
+button {
+  -webkit-appearance: button;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(0%,-112%);
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+img + button {
+  left : auto;
+  right: 0%;
+}
+
+img {
+  height: 750px;
+  width: 500px;
+  object-fit: cover;
+}
