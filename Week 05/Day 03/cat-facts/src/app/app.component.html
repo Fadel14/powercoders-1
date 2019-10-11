@@ -1,0 +1,30 @@
+
+<div style="text-align:center">
+    <img class="logo" src="assets/app-logo.png">
+    <h1>{{ title }}</h1>
+  </div>
+  
+  <div *ngIf="factList$ | async as factList">
+    <p class="fact-count">
+      Number of facts: {{ factList.all.length }}
+    </p>
+    
+    <div *ngFor="let fact of factList.all">
+  
+      <mat-card class="card-boxing">
+        <mat-card-header class="header">
+          <h3>{{ fact.user.name.first }} {{ fact.user.name.last }} - Up vote: {{ fact.upvotes }}</h3>
+        </mat-card-header>
+        <mat-card-content class="content">
+          <p>
+              {{ fact.text }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+  
+    </div>
+  </div>
+  
+  <div style="text-align:center">
+    <span>Copyright: <a href="http://vincentperrin.com">Vincent Perrin</a> - Credit: <a href="https://cat-fact.herokuapp.com">Alex Wohlbruck</a></span>
+  </div>
